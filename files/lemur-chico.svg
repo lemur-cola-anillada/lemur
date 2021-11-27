@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1200" style="enable-background:new 0 0 1000 1200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{font-family:"Roboto", sans-serif}
+	.st2{font-size:25px;}
+	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g id="Capa_1_1_">
+
+		<image style="overflow:visible;enable-background:new    ;" width="2000" height="2000" xlink:href="LemurIlustraciónDigital.png"  transform="matrix(0.5 0 0 0.5 0 0)">
+	</image>
+</g>
+<circle class="st2" cx="350" cy="250" r="150" stroke="orange" stroke-width="3" fill="none" />
+<g id="su_vientre">
+
+
+<text transform="matrix(1 0 0 1 60 800)" class="st2 st3">Glándulas</text>
+<text transform="matrix(1 0 0 1 216.3547 754.5189)" class="st0 st1">             </text>
+<text transform="matrix(1 0 0 1 60 820)" class="st2 st3">odoríferas</text>
+<text transform="matrix(1 0 0 1 135.4953 776.1189)" class="st0 st1">         </text>
+	<circle class="st2" cx="210" cy="800" r="40" stroke="orange" stroke-width="3" fill="none" />
+</g>
+
+
+<g>
+	<text transform="matrix(1 0 0 1 295 890)" class="st2 st3">Garra</text>
+	<text transform="matrix(1 0 0 1 216.3547 754.5189)" class="st0 st1">             </text>
+	<text transform="matrix(1 0 0 1 295 910)" class="st2 st3">de aseo</text>
+	<text transform="matrix(1 0 0 1 135.4953 776.1189)" class="st0 st1">         </text>
+	<circle class="st2" cx="420" cy="890" r="40" stroke="orange" stroke-width="3" fill="none" />
+</g>
+</svg>

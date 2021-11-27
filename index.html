@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <style>
+            /* AHORA VAMOS A IMPORTAR, DE UN VIAJE, DOS FUENTES Y SUS RESPECTIVOS PESOS */
+
+            @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+
+            /* vamos a contradecir a Bootstrap, partiendo por la fuente tipográfica y afectando sus variables --> https://getbootstrap.com/docs/5.1/customize/css-variables/  */
+
+            :root {
+                --bs-body-font-family: "Roboto", sans-serif;
+                --bs-primary: #f70;
+            }
+
+            /* vamos a ajustar los pesos de algunos títulos a lo que dispone la fuente  */
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-weight: 400;
+                font-family: "PT Serif", serif;
+            }
+
+            /* vamos a ajustar los pesos de otros títulos y negrita a lo que dispone la fuente  */
+
+            h5,
+            h6 {
+                font-weight: 700;
+                font-family: "PT Serif", serif;
+            }
+
+            /* AQUÍ HAGO UN AJUSTE IDIOMÁTICO:  EL GRINGO ENFATIZA CON ITÁLICA. EN CASTELLANO NO LO HACEMOS ASÍ, ENFATIZAMOS CON PESO DE FUENTE, MANTENIENDO UN ESTILO NORMAL */
+
+            strong, b, em {
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            /* definiré un tamaño del título de primer nivel (h1) que se ajuste según el viewport width --> https://www.yunbitsoftware.com/blog/2017/06/22/viewport-units-css-que-es/ */
+
+            h1 {
+                font-size: calc(2rem + 2vw);
+            }
+
+            /* repetiré el truco anterior con el título de segundo nivel (h2), que, a diferencia del anterior, puedo ocupar varias veces en la misma página */
+
+            h2 {
+                font-size: calc(0.75rem + 1vw);
+            }
+
+            /* usaré el ">" entre el título se segundo nive (h2) y el lapso en la misma línea (span) --> https://techbrij.com/css-selector-adjacent-child-sibling */
+
+            h2 > span {
+                background: var(--bs-primary);
+                color: #fff;
+            }
+
+            /* sigamos con el título de tercer nivel (h3) */
+
+            h3 {
+                font-size: calc(1.5rem + 1vw);
+            }
+
+            @keyframes corre {
+                0%{left: 0; position: absolute;}
+                100%{left: calc(100% - 60px); position: absolute;}
+            }
+
+            #lento{
+                animation: corre 10s normal forwards;
+            }
+
+            #veloz{
+                animation: corre 5s normal forwards;
+            }
+        </style>
+
+        <!--ESTO SERVIRÁ PARA COMPARAR UN ANTES Y UN DESPUÉS-->
+        <link href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css" rel="stylesheet" />
+
+        <title>Lemur de cola anillada</title>
+    </head>
+    <body>
+        <!--ESTE ES EL ENCABEZADO-->
+        <header class="container">
+            <div class="row">
+                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+
+                    <h2 class="text-center mt-5 fst-italic"><span class="px-2 py-1">Lemur catta</span></h2>
+
+                    <h1 class="text-center py-3">Lemur de cola anillada</h1>
+
+                    <p class="lead">Endémico de Madagascar, es un vivaz primate de nariz húmeda y caracteristica cola rayada que disfruta de una activa vida social y largos baños de sol.</p>
+
+                    <p>El Lemur de cola anillada, que también es conocido como <em>Maki de cola anillada</em>, es asociado, al igual que otros lemures, a las almas de los muertos. De hecho, el nombre de su familia, Lemruridae, nace de la antigua tradición romana de la Lemuria.
+                    </p>
+
+                    <div class="text-center py-3 px-3 px-sm-2 px-md-1 px-lg-0">
+                        <!--Este elemento es afectado con JavaScript-->
+                        <object data="files/conservacion_lc.svg" type="image/svg+xml" id="conservacion"></object>
+                        <!--Vean más abajo, las líneas 249 a 266-->
+                    </div>
+
+                    <!--Muestra el chucao chico o el grando, pero carga ambos-->
+
+                    <object data="files/lemur-chico.svg" type="image/svg+xml" class="d-md-none"></object>
+                    <object data="files/lemur-grande.svg" type="image/svg+xml" class="d-none d-md-block"></object>
+
+                    <?xml version="1.0" encoding="utf-8"?>
+
+                    <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 458.8" style="enable-background: new 0 0 1000 458.8;" xml:space="preserve">
+                        <style type="text/css">
+                            @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+                            .st2 {
+                                fill: none;
+                                stroke: #ed1c24;
+                                stroke-width: 2;
+                                stroke-miterlimit: 10;
+                            }
+
+                        </style>
+                        <title>1000px@qatar</title>
+                        <g id="Background2">
+                            <image style="overflow: visible; enable-background: new;" width="2000" height="767" xlink:href="img/683679A0F35850D9.png" transform="matrix(0.6 0 0 0.6 -127.67 1.12)"></image>
+                        </g>
+
+                        <g id="Texts">
+                            <circle class="st2" cx="200" cy="20" r="20" />
+
+                            <g class="st9">
+                                <path
+                                    d="M21.6,290.8c0,0.9-0.2,1.7-0.5,2.4s-0.8,1.2-1.4,1.6s-1.3,0.6-2,0.6c-1.2,0-2.1-0.4-2.8-1.2c-0.7-0.8-1.1-2-1.1-3.4v-1 c0-0.9,0.2-1.7,0.5-2.4c0.3-0.7,0.8-1.2,1.4-1.6c0.6-0.4,1.3-0.6,2-0.6s1.4,0.2,2,0.6s1,0.9,1.4,1.6s0.5,1.5,0.5,2.3V290.8z M20.8,289.7c0-1.2-0.3-2.1-0.8-2.8s-1.3-1-2.2-1c-0.9,0-1.7,0.3-2.2,1c-0.5,0.7-0.8,1.6-0.8,2.9v1c0,1.2,0.3,2.1,0.8,2.8 c0.5,0.7,1.3,1,2.2,1c1,0,1.7-0.3,2.2-1c0.5-0.7,0.8-1.6,0.8-2.8V289.7z"
+                                />
+                            </g>
+                            <g class="st9">
+                                <path d="M26.9,285.3l3.7,8.8l3.7-8.8h1.1v10h-0.8v-4.3l0.1-4.4l-3.7,8.8h-0.6l-3.7-8.7l0.1,4.4v4.4h-0.8v-10H26.9z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M45.5,292.5H41l-1,2.8h-0.9l3.8-10h0.8l3.8,10h-0.9L45.5,292.5z M41.2,291.8h4l-2-5.4L41.2,291.8z" />
+                                <path d="M58.4,295.3h-0.8l-5.7-8.5v8.5H51v-10h0.8l5.7,8.5v-8.5h0.8V295.3z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M415.9,361.7H415v-10h0.8V361.7z" />
+                                <path d="M428.1,361.7h-0.8l-5.7-8.5v8.5h-0.8v-10h0.8l5.7,8.5v-8.5h0.8V361.7z" />
+                                <path
+                                    d="M432.7,361.7v-10h2.8c0.8,0,1.5,0.2,2.2,0.6c0.6,0.4,1.2,0.9,1.5,1.6s0.5,1.5,0.5,2.4v0.9c0,0.9-0.2,1.7-0.5,2.4 s-0.9,1.2-1.5,1.6s-1.4,0.6-2.3,0.6H432.7z M433.6,352.5v8.5h1.9c1,0,1.9-0.3,2.5-1c0.6-0.7,1-1.6,1-2.8v-0.9 c0-1.1-0.3-2.1-0.9-2.8s-1.4-1-2.5-1H433.6z"
+                                />
+                            </g>
+                            <g class="st9">
+                                <path d="M445.1,361.7h-0.8v-10h0.8V361.7z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M455.5,358.9h-4.5l-1,2.8H449l3.8-10h0.8l3.8,10h-0.9L455.5,358.9z M451.2,358.2h4l-2-5.4L451.2,358.2z" />
+                            </g>
+                            <g class="st9">
+                                <path
+                                    d="M264.8,220v4.1h-0.8v-10h3.4c1,0,1.9,0.3,2.5,0.8s0.9,1.3,0.9,2.2c0,0.9-0.3,1.7-0.9,2.2c-0.6,0.5-1.4,0.8-2.5,0.8H264.8z M264.8,219.3h2.5c0.8,0,1.4-0.2,1.9-0.6s0.6-0.9,0.6-1.6c0-0.7-0.2-1.2-0.6-1.6c-0.4-0.4-1-0.6-1.8-0.6h-2.6V219.3z"
+                                />
+                            </g>
+                            <g class="st9">
+                                <path d="M279.1,221.3h-4.5l-1,2.8h-0.9l3.8-10h0.8l3.8,10h-0.9L279.1,221.3z M274.9,220.6h4l-2-5.4L274.9,220.6z" />
+                                <path d="M286.8,219.1l-1.4,1.4v3.6h-0.8v-10h0.8v5.4l5.1-5.4h1.1l-4.2,4.4l4.5,5.5h-1L286.8,219.1z" />
+                                <path d="M296.6,224.1h-0.8v-10h0.8V224.1z" />
+                                <path
+                                    d="M307,221.6c0-0.6-0.2-1-0.6-1.3c-0.4-0.3-1.1-0.6-2.1-0.9c-1-0.3-1.8-0.6-2.3-0.9c-0.7-0.5-1-1.1-1-1.9 c0-0.8,0.3-1.4,0.9-1.9c0.6-0.5,1.4-0.7,2.4-0.7c0.7,0,1.3,0.1,1.8,0.4s0.9,0.6,1.2,1.1s0.4,1,0.4,1.5h-0.8c0-0.7-0.2-1.2-0.7-1.6 c-0.5-0.4-1.1-0.6-1.9-0.6c-0.8,0-1.4,0.2-1.8,0.5c-0.5,0.3-0.7,0.8-0.7,1.3c0,0.5,0.2,0.9,0.6,1.2s1.1,0.6,1.9,0.8s1.6,0.5,2,0.8 c0.5,0.3,0.8,0.6,1,0.9s0.3,0.8,0.3,1.3c0,0.8-0.3,1.4-0.9,1.9s-1.5,0.7-2.5,0.7c-0.7,0-1.3-0.1-1.9-0.4s-1-0.6-1.3-1.1 s-0.5-1-0.5-1.6h0.8c0,0.7,0.3,1.3,0.8,1.7s1.2,0.6,2.1,0.6c0.8,0,1.4-0.2,1.9-0.5S307,222.2,307,221.6z"
+                                />
+                            </g>
+                            <g class="st9">
+                                <path d="M318.8,214.8h-3.4v9.2h-0.8v-9.2h-3.4v-0.7h7.7V214.8z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M327.3,221.3h-4.5l-1,2.8h-0.9l3.8-10h0.8l3.8,10h-0.9L327.3,221.3z M323,220.6h4l-2-5.4L323,220.6z" />
+                                <path d="M340.2,224.1h-0.8l-5.7-8.5v8.5h-0.8v-10h0.8l5.7,8.5v-8.5h0.8V224.1z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M917,334.7l0.1,0.2l0.1-0.2l3.1-8.7h0.9l-3.7,10h-0.8l-3.7-10h0.9L917,334.7z" />
+                                <path d="M925.8,336H925v-10h0.8V336z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M936.2,331.2h-4.7v4.1h5.4v0.7h-6.2v-10h6.2v0.7h-5.3v3.8h4.7V331.2z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M947.7,326.7h-3.4v9.2h-0.8v-9.2h-3.4V326h7.7V326.7z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M958.8,336h-0.8l-5.7-8.5v8.5h-0.8v-10h0.8l5.7,8.5V326h0.8V336z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M968.9,333.2h-4.5l-1,2.8h-0.9l3.8-10h0.8l3.8,10h-0.9L968.9,333.2z M964.6,332.5h4l-2-5.4L964.6,332.5z" />
+                                <path d="M975.5,326l3.7,8.8l3.7-8.8h1.1v10h-0.8v-4.3l0.1-4.4l-3.7,8.8h-0.6l-3.7-8.7l0.1,4.4v4.4h-0.8v-10H975.5z" />
+                            </g>
+                            <circle class="st10" cx="323.7" cy="369.7" r="2" />
+                            <circle cx="835.1" cy="265.5" r="2" />
+                            <circle cx="349.4" cy="183.6" r="2" />
+                            <circle cx="402.6" cy="254.1" r="2" />
+                            <g class="st9">
+                                <path
+                                    d="M803.4,125.3c-0.1,1-0.5,1.9-1.1,2.4s-1.5,0.8-2.5,0.8c-0.7,0-1.4-0.2-2-0.6s-1-0.9-1.3-1.6c-0.3-0.7-0.5-1.5-0.5-2.3 v-1.3c0-0.9,0.2-1.7,0.5-2.4c0.3-0.7,0.8-1.2,1.3-1.6c0.6-0.4,1.2-0.6,2-0.6c1.1,0,1.9,0.3,2.5,0.9c0.6,0.6,1,1.4,1.1,2.4h-0.8 c-0.2-1.7-1.1-2.5-2.8-2.5c-0.9,0-1.6,0.3-2.2,1c-0.5,0.7-0.8,1.6-0.8,2.8v1.2c0,1.1,0.3,2.1,0.8,2.8c0.5,0.7,1.2,1,2.1,1 c0.9,0,1.5-0.2,2-0.6c0.4-0.4,0.7-1.1,0.8-1.9H803.4z"
+                                />
+                                <path d="M814.9,128.4h-0.8v-4.8h-5.7v4.8h-0.8v-10h0.8v4.5h5.7v-4.5h0.8V128.4z" />
+                                <path d="M820.6,128.4h-0.8v-10h0.8V128.4z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M832.7,128.4h-0.8l-5.7-8.5v8.5h-0.8v-10h0.8l5.7,8.5v-8.5h0.8V128.4z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M842.8,125.6h-4.5l-1,2.8h-0.9l3.8-10h0.8l3.8,10h-0.9L842.8,125.6z M838.6,124.9h4l-2-5.4L838.6,124.9z" />
+                            </g>
+                            <g class="st9">
+                                <path d="M111.6,146.4h-0.8v-10h0.8V146.4z" />
+                                <path
+                                    d="M120.1,142.3h-2.9v4.1h-0.8v-10h3.2c1.1,0,1.9,0.3,2.5,0.8s0.9,1.2,0.9,2.2c0,0.6-0.2,1.2-0.6,1.7c-0.4,0.5-0.9,0.8-1.5,1 l2.5,4.2v0.1h-0.9L120.1,142.3z M117.2,141.6h2.6c0.7,0,1.3-0.2,1.7-0.6s0.6-0.9,0.6-1.6c0-0.7-0.2-1.2-0.7-1.6s-1.1-0.6-1.9-0.6 h-2.4V141.6z"
+                                />
+                                <path d="M132.7,143.6h-4.5l-1,2.8h-0.9l3.8-10h0.8l3.8,10h-0.9L132.7,143.6z M128.5,142.9h4l-2-5.4L128.5,142.9z" />
+                                <path d="M145.6,146.4h-0.8l-5.7-8.5v8.5h-0.8v-10h0.8l5.7,8.5v-8.5h0.8V146.4z" />
+
+                    <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
+
+                    <!--Acá se cargan dos audios, pero sonará uno-->
+                    <div class="mx-auto px-3 py-2 rounded-pill shadow-sm" style="width:220px; background:#ddd">
+                        <audio id="elAudio">
+                            <source src="files/canto.mp3" type="audio/mpeg">
+                            <source src="files/canto.ogg" type="audio/ogg">
+                        </audio>
+                        <div class="form-check form-switch text-center">
+                            <input class="form-check-input" type="checkbox" id="elSwitch">
+                            <label class="form-check-label" for="elSwitch">Escucha al chucao</label>
+                        </div>
+                    </div>
+                    <!--Suena con JavaScript, ver líneas 267 a 278-->
+                </div>
+            </div>
+        </header>
+        <!--ESTE ES EL CONTENIDO PRINCIPAL-->
+        <main>
+            <section class="container-fluid g-0">
+                <div class="row g-0">
+                    <div class="col-12 py-3">
+                        <h3 class="text-center pt-5 pb-2">Presencia</h3>
+                        <!--VAMOS A INCLUIR TRES SVG EN UN CARRUSEL-->
+                        <div id="carruselConMapa" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carruselConMapa" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carruselConMapa" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carruselConMapa" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="1000">
+                                    <object class="d-block w-100" data="files/mapa-1.svg" type="image/svg+xml"></object>
+                                    <div class="carousel-caption">
+                                        <h5>1950</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="1000">
+                                    <object class="d-block w-100" data="files/mapa-2.svg" type="image/svg+xml"></object>
+                                    <div class="carousel-caption">
+                                        <h5>1970</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="1000">
+                                    <object class="d-block w-100" data="files/mapa-3.svg" type="image/svg+xml"></object>
+                                    <div class="carousel-caption">
+                                        <h5>2000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mt-3 mb-5">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lorem a lorem vulputate porttitor. In faucibus in justo id posuere. Cras iaculis odio auctor tempus facilisis. Quisque iaculis, est at rhoncus ullamcorper, turpis magna lobortis est, id egestas odio neque in orci. Phasellus fringilla ut ex vitae viverra. Pellentesque ullamcorper eget quam in tristique. Etiam vel pharetra est, ac hendrerit est. Nullam et elit felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean tortor risus, ornare at bibendum nec, lobortis vel orci. Phasellus congue nunc at iaculis imperdiet. In luctus finibus congue.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h3 class="text-center pt-5 pb-2">Etcétera</h3>
+                    </div>
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <div class="row align-items-center py-4">
+                            <div class="col-sm-6 text-center text-sm-start order-sm-2">
+                                <h4>Visión del tigre</h4>
+                                <p>Su visión es muy aguda aún en la oscuridad. De noche su pupila se agranda para dejar pasar más luz y de día en cambio se reduce.</p>
+                                <div class="small fw-bold">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioNocturno" value="nocturno" onchange="getValue(this)" checked />
+                                        <label class="form-check-label" for="radioNocturno">DE NOCHE</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioDiurno" value="diurno" onchange="getValue(this)" />
+                                        <label class="form-check-label" for="radioDiurno">DE DÍA</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 order-sm-1">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" class="w-100">
+                                    <style type="text/css">
+                                        .uno {
+                                            fill: none;
+                                            stroke: #585453;
+                                            stroke-linecap: round;
+                                            stroke-miterlimit: 10;
+                                        }
+                                        .dos {
+                                            fill: #dd7324;
+                                        }
+                                    </style>
+                                    <path id="arriba" class="uno" d="M5,50C5,50,57.7-5.9,110,5c52.3,10.9,85,80,85,80" />
+                                    <path id="abajo" class="uno" d="M25,35c0,0,14.1,55.5,75,60c59.5,4.4,70-45,70-45" />
+                                    <circle id="iris" class="uno" cx="105" cy="50" r="40" />
+                                    <!--la Id es clave, porque eso es lo que el JavaScript busca en el documento-->
+                                    <circle id="poca_luz" class="dos" cx="105" cy="50" r="35" class="d-none" />
+                                    <ellipse id="mucha_luz" class="dos" cx="105" cy="50" rx="10" ry="35" class="d-none" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h4 class="text-center pt-5 pb-2">Parentezco</h4>
+                        <object data="files/grafico-tamanos3.svg" type="image/svg+xml" class="my-3"></object>
+                        <p>Aunque la clasificación de los Lemuridae no está libre de controversia (ya que cada vez se descubren nuevas especies - extintas o no), se pueden contar <em>cinco géneros</em> y más de cien especies o subespecies reconocidas.</p>
+                    </div>
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                        <h4 class="text-center pt-5 pb-2">Yuxtaposición de imágenes</h4>
+                        <div id="image-compare" class="my-3">
+                            <img src="files/beirut-antes.jpg" alt="Antes" />
+                            <img src="files/beirut-despues.jpg" alt="Después" />
+                        </div>
+                        <p>Hay distintas formas de resolver, con JavaScript, una <a href="https://bashooka.com/coding/image-comparison-slider-javascript-libraries/" target="_blank">yuxtaposición imágenes</a>. En este caso ocupamos <a href="https://image-compare-viewer.netlify.app/" target="_blank">Imagen Comparte Viewer</a>, que ofrece su código de programación como una biblioteca de JavaScript complementada con un código de descripción de estilo (CSS). </p>
+                    </div>
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                            <h4 class="text-center pt-5 pb-2">Animación</h4>
+                            <p>Recuerden que podemos animar SVG con CSS, como en el siguiente caso; donde tenemos un par de <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">animaciones</a>, cada una con su <a href="https://www.w3schools.com/css/css3_2dtransforms.asp" target="_blank">transformación en 2D</a>:
+                            </p>
+                            <object class="mx-5" data="files/el-grito.svg" type="image/svg+xml"></object>
+                            <p class="text-center mx-5 mb-5 small text-muted">Este es el saco gural o faringeo del Siamang, que puede inflarse hasta alcanzar el tamaño de su cabeza. Está presente en macho y hembra. Se trata de una característica morfológica única que los distingue de otros gibones.</p>
+                            <p class="mb-5">Como ya se dijo, hay formas <a href="https://css-tricks.com/guide-svg-animations-smil/" target="_blank" rel="noopener noreferrer">más complejas de animar SVG</a>, donde no se utiliza CSS, sino el mismo primer lenguaje. De tal forma se resuelven las animaciones de <strong>Movements and maneuvers </strong> en <a href="https://multimedia.scmp.com/culture/article/ufo/" target="_blank" rel="noopener noreferrer">Are we alone?</a>, un trabajo de Adolfo Arranz y Pablo Robles, publicado en el South China Morning Post.</p>
+                            <p>También hay formas de animar con CSS y HTML, sin SVG, pero eso lo podremos ver la próxima sesión, sobre <a href="https://github.com/profesorfaco/infografia/tree/main/clase-4" target="_blank">JavaScript: Datos y bibliotecas</a>:</p>
+                            <div class="row mb-5" id="final">
+                                <div class="col-12" style="position:relative; height:60px;">
+                                    <img src="files/corre-atrasado.gif" width="60" height="60">
+                                </div>
+                                <div class="col-12" style="position:relative; height:60px;">
+                                    <img src="files/corre-atrasado.gif" width="60" height="60">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--ESTE ES EL PIE DE PÁGINA-->
+        <footer class="bg-dark text-white-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col py-5">
+                        <p class="text-center small">Lo dejaremos hasta aquí, por ahora</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--EN EL SCRIPT QUE SIGUE AJUSTA EL SVG DEL ESTADO DE CONSERVACIÓN AL ANCHO DE LA VENTANA-->
+        <script>
+            window.addEventListener("DOMContentLoaded", elAjuste);
+            window.addEventListener("resize", elAjuste);
+            var ajustable = document.getElementById("conservacion");
+            function elAjuste() {
+                if (window.innerWidth >= 1000) {
+                    ajustable.className = "";
+                    ajustable.classList.add("w-50");
+                } else if (window.innerWidth < 1000 && window.innerWidth > 700) {
+                    ajustable.className = "";
+                    ajustable.classList.add("w-75");
+                } else {
+                    ajustable.className = "";
+                    ajustable.classList.add("w-100");
+                }
+            }
+        </script>
+        <!--CON EL SIGUIENTE SCRIPT HAGO CANTAR AL CHUCAO-->
+        <script>
+            var canto = document.getElementById("elAudio");
+            var boton = document.getElementById("elSwitch");
+            boton.addEventListener('change', function() {
+                if (this.checked) {
+                    canto.play();
+                } else {
+                    canto.pause();
+                }
+            });
+        </script>
+        <!--CON EL SIGUIENTE SCRIPT CAMBIO LOS OJOS DE NOCHE A DÍA-->
+        <script>
+            function getValue(radio) {
+                if (radio.value == "nocturno") {
+                    document.getElementById("poca_luz").classList.remove("d-none");
+                    document.getElementById("mucha_luz").classList.add("d-none");
+                } else {
+                    document.getElementById("poca_luz").classList.add("d-none");
+                    document.getElementById("mucha_luz").classList.remove("d-none");
+                }
+            }
+        </script>
+        <!--BOOTSTRAP, ADEMÁS DE UN CSS, OFRECE SU PROPIA BIBLIOTECA DE JAVASCRIPT-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!--LO QUE SIGUE ES OTRA BIBLIOTECA DE JAVASCRIPT-->
+        <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+        <!--LO QUE SIGUE ES LA CONFIGURACIÓN DE LA COMPARACIÓN DE IMÁGENES-->
+        <script>
+            const element = document.querySelector("#image-compare");
+            const options = {
+                  controlColor: "#FFFFFF",
+                  controlShadow: true,
+                  addCircle: true,
+                  addCircleBlur: true,
+                  showLabels: true,
+                  labelOptions: {
+                    before: 'Antes',
+                    after: 'Despues',
+                    onHover: false
+                }
+            };
+            const viewer = new ImageCompare(element, options).mount();
+        </script>
+        <!--PARA QUE HOMERO CORRA UNA VEZ LLEGUEMOS AL FINAL-->
+        <script>
+            var f = document.querySelector("#final").offsetTop;
+            addEventListener("scroll",function () {
+                if (f > window.scrollY) {
+                    document.querySelector("#final").querySelectorAll("img")[0].setAttribute("id", "veloz");
+                    document.querySelector("#final").querySelectorAll("img")[1].setAttribute("id", "lento");
+                }
+            },false);
+        </script>
+    </body>
+</html>
